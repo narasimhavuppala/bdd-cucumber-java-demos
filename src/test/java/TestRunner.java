@@ -12,6 +12,8 @@ plugin = { "pretty:pretty-report.log",
 	//	"usage",
 		"rerun"
 		}, 
-monochrome = true)
+glue= {"com.def.stepdefs"},
+monochrome = true
+)
 public class TestRunner {
 }
