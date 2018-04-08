@@ -7,6 +7,8 @@ import java.util.List;
 import com.demo.func.Calculator;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -72,6 +74,16 @@ public class CalcStepDef {
 			objCalc = new Calculator(Integer.parseInt(arg1), Integer.parseInt(arg2));
 
 		}
+	}
+
+	@Before
+	public void setup() {
+		System.out.println("This will run before the Scenario");
+	}
+
+	@After("@addtag")
+	public void cleanup() {
+		System.out.println("This will run after the Scenario");
 	}
 
 }
