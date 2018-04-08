@@ -4,6 +4,6 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions
+@CucumberOptions(tags= {"@subtag"})
 public class TestRunner {
 }
