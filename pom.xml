@@ -5,26 +5,23 @@
 	<groupId>com.demo.cucumber</groupId>
 	<artifactId>Culcaumber-Calculator-Demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<cucumber.version>1.2.5</cucumber.version>
+	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>1.2.5</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.5</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
-
-
-
-
 	</dependencies>
 
 	<build>
