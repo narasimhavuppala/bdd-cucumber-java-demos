@@ -2,11 +2,15 @@ package com.def.stepdefs;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
 import com.demo.func.Calculator;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import gherkin.formatter.model.DataTableRow;
 
 public class CalcStepDef {
 
@@ -58,5 +62,36 @@ public class CalcStepDef {
 	public void it_should_answer_with_div(int arg1) throws Throwable {
 		assertEquals(arg1, result);
 	}
+
+//	@Given("^I have a calc with$")
+//	public void i_have_a_calc_with(DataTable dt) throws Throwable {
+//		// Write code here that turns the phrase above into concrete actions
+//		// For automatic transformation, change DataTable to one of
+//		// List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+//		// E,K,V must be a scalar (String, Integer, Date, enum etc)
+//
+//		// throw new PendingException();
+//
+//		List<DataTableRow> rows = dt.getGherkinRows();
+//		for (DataTableRow row : rows) {
+//			String arg1 = row.getCells().get(0);
+//			String arg2 = row.getCells().get(1);
+//			objCalc = new Calculator(Integer.parseInt(arg1), Integer.parseInt(arg2));
+//		}
+//	}
+//
+//	@Then("^it should answer with add$")
+//	public void it_should_answer_with_add(DataTable dt) throws Throwable {
+//		// Write code here that turns the phrase above into concrete actions
+//		// For automatic transformation, change DataTable to one of
+//		// List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+//		// E,K,V must be a scalar (String, Integer, Date, enum etc)
+//		List<DataTableRow> rows = dt.getGherkinRows();
+//		for (DataTableRow row : rows) {
+//			String arg1 = row.getCells().get(0);
+//			System.out.println(arg1);
+//			//objCalc = new Calculator(Integer.parseInt(arg1), Integer.parseInt(arg2));
+//		}
+//	}
 
 }
