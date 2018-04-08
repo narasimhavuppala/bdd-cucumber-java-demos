@@ -8,6 +8,7 @@ import cucumber.api.junit.Cucumber;
 plugin = { "pretty:pretty-report.log", 
 		"html:target/html-report",
 		"json:target/json-report.json" ,
+		"junit:target/junit-report.xml" ,
 		//"progress",
 	//	"usage",
 		"rerun"

@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.demo.func.Calculator;
 
 import cucumber.api.DataTable;
@@ -18,11 +20,13 @@ public class CalcStepDef {
 
 	Calculator objCalc;
 	int result;
+	
+	 private static Logger log = Logger.getLogger(CalcStepDef.class.getName());//
 
 	@Given("^I have a calc with (\\d+) (\\d+)$")
 	public void i_have_a_calc_with(int arg1, int arg2) throws Throwable {
+	
 		objCalc = new Calculator(arg1, arg2);
-		
 		result = 0;
 	}
 
