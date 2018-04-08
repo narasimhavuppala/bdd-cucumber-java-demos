@@ -22,6 +22,7 @@ public class CalcStepDef {
 	@Given("^I have a calc with (\\d+) (\\d+)$")
 	public void i_have_a_calc_with(int arg1, int arg2) throws Throwable {
 		objCalc = new Calculator(arg1, arg2);
+		
 		result = 0;
 	}
 
@@ -43,6 +44,7 @@ public class CalcStepDef {
 	@Then("^it should answer with sub (\\d+)$")
 	public void it_should_answer_with_sub(int arg1) throws Throwable {
 		assertEquals(arg1, result);
+		Thread.sleep(5000);
 	}
 
 	@When("^I ask it to say multiply$")

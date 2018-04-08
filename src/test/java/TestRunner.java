@@ -4,6 +4,14 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags= {"@subtag"},plugin= {"pretty"},monochrome=true)
+@CucumberOptions(tags = { "@subtag" }, 
+plugin = { "pretty:pretty-report.log", 
+		"html:target/html-report",
+		"json:target/json-report.json" ,
+		//"progress",
+	//	"usage",
+		"rerun"
+		}, 
+monochrome = true)
 public class TestRunner {
 }
